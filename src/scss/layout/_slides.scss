@@ -1,0 +1,71 @@
+@use "base/variables" as v;
+.Slides{
+  background-color: v.$grisOscuro;
+  &-title{
+    text-transform: uppercase;
+    color: v.$blanco;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  &-subtitle{
+    font-size: 3.5rem;
+    border-bottom: 8px solid v.$amarilloOpaco;
+    width: fit-content;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    color: v.$blanco;
+  }
+  &-content{
+    max-width: 95rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    &__description{
+      font-size: v.$font-size-h1;
+      margin: 0;
+      line-height: 1.2;
+      color: v.$blanco;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  padding: 50px 0;
+}
+.swiper-slide {
+  position: relative;
+  width: 320px;
+  aspect-ratio: 3/4;
+  border-radius: 14px;
+  border: 1px solid rgba(177, 177, 177, 0.4)
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  user-select: none;
+}
+
+
+.title {
+  position: absolute; bottom: 5px;
+  left: 50%;
+  transform: translate (-50%, -20%);
+  -ms-transform: translate( -50%, -20%);
+  width: max-content;
+  text-align: center;
+  padding: 10px 18px;
+  background: rgba(46, 39, 39, 0.3);
+  border-radius: 8px;
+  border: 2px solid rgba(177, 177, 177, 0.4); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur (10px); transition: all 0.5s linear;
+}
+.title span{
+  font-size: 1.2rem;
+  font-weight: 600;
+}

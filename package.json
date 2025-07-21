@@ -1,0 +1,28 @@
+{
+  "name": "Los Pinos",
+  "version": "1.0.0",
+  "description": "LandingPage - Los Pinos",
+  "type": "module",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Juan Sebastian Moriones Moncayo",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.75.0"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^9.1.0",
+    "imagemin-pngquant": "^10.0.0"
+  }
+}

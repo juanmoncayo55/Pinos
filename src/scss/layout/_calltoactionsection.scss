@@ -1,0 +1,76 @@
+@use "base/variables" as v;
+
+.CallToActionSection{
+  border-radius: 2rem;
+  margin-top: -2rem;
+  background-color: white;
+  padding: 10rem 0;
+  &-title{
+    text-transform: uppercase;
+    color: v.$grisOscuro;
+    background-color: v.$amarilloOpaco;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: .5rem 5rem;
+    width: fit-content;
+  }
+  &-subtitle{
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: transparent;
+    color: v.$grisOscuro;
+    margin: 0;
+    text-align: center;
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  &-text{
+    color: v.$grisOscuro;
+    text-align: center;
+    max-width: 95rem;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+  }
+  &-textLine, &-textBottom{
+    font-weight: 600;
+    background-color: transparent;
+    color: v.$verdeCespedOscuro;
+    border-bottom: 8px solid v.$amarilloOpaco;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 1;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+  }
+  &-textBottom{
+    border-bottom: none;
+    padding-bottom: 0;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 4.5rem;
+  }
+  &-link{
+    color: v.$verdeCespedOscuro;
+    background-color: v.$amarilloOpaco;
+    border-radius: 30px;
+    padding: .5rem 7rem;
+    font-size: 4.5rem;
+    font-weight: 800;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    transition: .3s all ease-in-out;
+    margin-top: 4rem;
+    &:hover{
+      color: v.$amarilloOpaco;
+      background-color: v.$verdeCespedOscuro;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "base/variables" as v;
+
+.Banner{
+  background-image: url("/build/img/wp-build.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 120vh;
+  margin-top: 3rem;
+  position: relative;
+  padding: 0;
+  @media (max-width: 1170px){
+    height: 80vh;
+  }
+  &-contenedor{
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-overlay{
+    background-image: linear-gradient(0deg, black 0%, transparent 61%, white 89%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  &-content{
+    position: relative;
+    z-index: 10;
+    max-width: 80rem;
+    border-right: 10px solid v.$amarilloOpaco;
+    padding-right: 15px;
+    &__title{
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      &-s1{
+        font-weight: 400;
+      }
+      &-s2{
+        color: v.$verdeCespedOscuro;
+      }
+    }
+    &-text{
+      font-size: v.$text-base-1;
+      text-align: right;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+  }
+}
