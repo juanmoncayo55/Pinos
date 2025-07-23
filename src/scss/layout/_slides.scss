@@ -1,6 +1,7 @@
 @use "base/variables" as v;
 .Slides{
   background-color: v.$grisOscuro;
+  padding: 3rem 2rem;
   &-title{
     text-transform: uppercase;
     color: v.$blanco;
@@ -16,6 +17,8 @@
     margin: 0 auto;
     margin-bottom: 3rem;
     color: v.$blanco;
+    line-height: inherit;
+    text-align: center;
   }
   &-content{
     max-width: 95rem;

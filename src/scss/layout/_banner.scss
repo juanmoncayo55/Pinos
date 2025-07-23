@@ -5,10 +5,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  background-attachment: fixed;
   height: 120vh;
   margin-top: 3rem;
   position: relative;
   padding: 0;
+  
   @media (max-width: 1170px){
     height: 80vh;
   }
@@ -45,6 +47,24 @@
       text-align: right;
       line-height: 1.2;
       margin-bottom: 0;
+      
     }
   }
 }
+
+.Banner-contenedor {
+  @media (max-width: 768px) {
+    
+    background: #ffffff52;
+    border-radius: 10px;
+    padding: 0px 10px;
+
+  }
+}
+
+.Banner {
+  @media (max-width: 768px) {
+    background-image: url("/build/img/wp-build-movil.jpeg");
+  }
+}
+

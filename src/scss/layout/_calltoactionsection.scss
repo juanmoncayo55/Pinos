@@ -6,7 +6,7 @@
   border-radius: 2rem;
   margin-top: -2rem;
   background-color: white;
-  padding: 10rem 0;
+  padding: 4rem 0;
   &-title{
     text-transform: uppercase;
     color: v.$grisOscuro;
@@ -14,8 +14,9 @@
     text-align: center;
     margin: 0 auto;
     margin-bottom: 1rem;
-    padding: .5rem 5rem;
+    padding: 2rem 2rem;
     width: fit-content;
+    font-size: 4rem;
   }
   &-subtitle{
     text-transform: uppercase;
@@ -60,17 +61,18 @@
     font-size: 4.5rem;
   }
   &-link{
-    color: v.$verdeCespedOscuro;
-    background-color: v.$amarilloOpaco;
+    color: #FFF;
+    background-color: #8bc34a;
     border-radius: 30px;
     padding: .5rem 7rem;
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 600;
     display: block;
     margin: 0 auto;
     width: fit-content;
     transition: .3s all ease-in-out;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    text-align: center;
     &:hover{
       color: v.$amarilloOpaco;
       background-color: v.$verdeCespedOscuro;

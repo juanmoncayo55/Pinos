@@ -11,7 +11,7 @@
     align-items: center;
 
     @media (max-width: 1139px){
-      display: grid;
+      display: block;
       grid-template-columns: repeat(2, 1fr);
       row-gap: 20px;
     }
@@ -20,15 +20,18 @@
     flex: .25;
     margin: 0;
     @media (max-width: 1138px){
-      flex: none;
-      max-width: 135px;
-      width: 90%;
-      margin: 0 auto;
+      display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente si tiene altura definida */
+    max-width: 135px;
+    width: 90%;
+    margin: 10px auto;
     }
     @media (max-width: 1139px){
       order: -1;
     }
   }
+  
   &-navigation{
     &__title{
       margin: 0;
@@ -46,6 +49,7 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
+      text-align: center;
       &__list{
         list-style: none;
         &-link{
@@ -75,9 +79,10 @@
     }
     &__content{
       width: 100%;
-      display: flex;
+      display: block;
       justify-content: space-between;
       gap: 10px;
+      text-align: center;
       &-link{
         & i{
           color: v.$grisOscuro;
@@ -145,3 +150,26 @@
     }
   }
 }
+
+
+.Footer-overlay {
+  display: flex;
+  justify-content: center;  // Centra horizontalmente
+  align-items: center;      // Centra verticalmente si tiene altura definida
+  gap: 2rem;                // Espacio entre los logos
+  padding: 1rem;            // Opcional, algo de espacio interno
+
+  .Footer-figure {
+    flex: 1 1 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+

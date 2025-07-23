@@ -18,11 +18,11 @@
   &-gallery{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 12px;
     width: 100%;
     /*max-width: 120rem;
     margin: 0 auto;*/
-    padding: 1rem 0;
+    padding: 1rem 10px;
     &__item{
       position: relative;
       transform: rotate(0deg) translateX(0); 
@@ -37,9 +37,20 @@
         height: 400px;
         border-radius: 3rem;
         @media (max-width: 800px){
-          height: 600px;
+          height: 350px;
           object-position: top;
         }
+
+        &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 800px) {
+        height: 350px;
+        object-position: top;
+        cursor: pointer;
+      }
       }
       &:nth-child(1){
         transform: rotate(10deg) translateX(-3%) translateY(8%);
@@ -64,15 +75,16 @@
       }
     }
     @media (max-width: 800px){
-      grid-template-columns: 1fr;
-    }
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: auto;
+}
   }
 
   &-content{
     max-width: 95rem;
     width: 90%;
     margin: 0 auto;
-    margin-top: 9rem;
+    margin-top: 3rem;
     text-align: center;
     &__title{
       font-weight: 700;
@@ -80,6 +92,10 @@
       color: v.$grisOscuro;
       line-height: 1;
       margin: 0;
+      margin-top: 10rem;
+      @media (max-width: 800px){
+      margin-top: 3rem;
+    }
     }
     &__detail{
       font-size: 3.5rem;
@@ -87,6 +103,10 @@
       width: fit-content;
       margin: 0 auto;
       margin-bottom: 3rem;
+    margin-top: 3rem;
+    line-height: inherit;
+
+    
     }
     &__description{
       font-size: v.$font-size-h1;
