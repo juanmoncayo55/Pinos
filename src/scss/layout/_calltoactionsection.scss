@@ -73,9 +73,291 @@
     transition: .3s all ease-in-out;
     margin-top: 3rem;
     text-align: center;
+    border: 0;
+    cursor: pointer;
     &:hover{
       color: v.$amarilloOpaco;
       background-color: v.$verdeCespedOscuro;
     }
   }
+}
+
+/* Codigo de Modal */
+
+/* Estilos del Modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Permanece en la misma posición incluso al hacer scroll */
+  z-index: 30; /* Se sitúa encima de todo */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Habilitar scroll si el contenido es demasiado grande */
+  background-color: rgba(0,0,0,0.7); /* Fondo semi-transparente */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; /* Centrar el contenido */
+  border: 1px solid #888;
+  width: 95%; /* Ancho del contenido del modal */
+  max-width: 900px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  /* Animación de entrada */
+  animation: fadeIn 0.3s ease-out;
+
+  &__img{
+    width: 100%;
+    display: block;
+  }
+  &__form{
+    padding: 20px;
+    &-title{
+      font-size: 2.8rem;
+      line-height: 1;
+    }
+    &-lists{
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      & p {
+        margin: 0;
+      }
+    }
+    & p{
+      word-break: break-all;
+    }
+  }
+
+  &__formulario, &__footer{
+    padding: 20px;
+    &-title{
+      font-size: 2.5rem;
+      font-weight: bold
+    }
+  }
+
+  &__footer{
+    p{
+      font-size: 1.8rem;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.modal-content__footer-btn{
+  border-radius: 15px;
+  border: 0;
+  padding: 1rem 4rem;
+  background-color: #FFC900;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  margin: 0 0 0 auto;
+  transition: .3s all ease-in-out;
+  &:hover{
+    background-color: #ff9800;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Animación de rebote al cerrar */
+.modal-content.bounce-out {
+  animation: bounceOut 0.5s forwards;
+}
+
+@keyframes bounceOut {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  25% {
+      transform: scale(1.05); /* Pequeño rebote hacia afuera */
+      opacity: 1;
+  }
+  50% {
+      transform: scale(0.95); /* Pequeño rebote hacia adentro */
+      opacity: 1;
+  }
+  75% {
+      transform: scale(1.02); /* Otro pequeño rebote */
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(0); /* Desaparece */
+      opacity: 0;
+  }
+}
+
+/* Estilos de formulario */
+.floating-label-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label-group input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+  width: 100%;
+  font-size: 16px;
+  background: transparent;
+}
+
+.floating-label-group input:focus {
+  outline: none;
+  border-bottom: 2px solid #FF6F00;
+}
+
+.floating-label-group label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  font-size: 16px;
+  color: #565656;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.floating-label-group input:focus + label,
+.floating-label-group input:not(:placeholder-shown) + label {
+  top: -14px;
+  font-size: 12px;
+  color: #FF6F00;
+}
+
+.radio-group {
+  margin-bottom: 20px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.radio-group input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: #FF6F00;
+}
+
+.radio-group input[type="radio"]:checked::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #FF6F00;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+.radio-group input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-group input[type="checkbox"]:checked {
+  border-color: #FF6F00;
+  background-color: #FF6F00;
+}
+
+.radio-group input[type="checkbox"]:checked::after {
+  content: '✓';
+  color: white;
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  font-size: 14px;
+}
+
+.question-title, .title-hour{
+  font-weight: bold;
+  color: #000 !important;
+  font-size: 1.6rem !important;
+}
+
+.message-box {
+  display: none; /* Oculto por defecto */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+
+  /* Posicionamiento fijo en la ventana (viewport) */
+  position: fixed;
+  top: 20px; /* Separación de 20px desde la parte superior de la ventana */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta para un centrado perfecto */
+  z-index: 2000; /* Asegura que esté por encima de modales y otros elementos */
+
+  min-width: 300px; /* Ancho mínimo para que se vea bien */
+  max-width: 90%; /* Ancho máximo para pantallas pequeñas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para que destaque */
+  
+  border: 1px solid transparent; /* Para que no cambie el layout al aparecer el borde de éxito/error */
+}
+
+.message-box.success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #065f46;
+}
+
+.message-box.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #991b1b;
+}
+
+.mtDay{
+  margin-top: 3rem;
+}
+.mtHour{
+  margin-top: 3rem;
 }

@@ -9,6 +9,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: 1139px){
       display: block;
@@ -126,8 +128,8 @@
   overflow: hidden;
   &-shape{
     position: absolute;
-    right: -26%;
-    bottom: -35%;
+    right: -34%;
+    bottom: -38%;
     transform: rotate(29deg);
     width: 750px;
 
@@ -160,7 +162,7 @@
   padding: 1rem;            // Opcional, algo de espacio interno
 
   .Footer-figure {
-    flex: 1 1 150px;
+    flex: 0 0 150px;
     display: flex;
     justify-content: center;
     align-items: center;

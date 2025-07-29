@@ -3,6 +3,9 @@ import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass'
 import browserSync from 'browser-sync'
 import imagemin from "gulp-imagemin"
+import autoprefixer from 'gulp-autoprefixer'
+import sourcemaps from 'gulp-sourcemaps'
+import csso from 'gulp-csso';
 
 const sass = gulpSass(dartSass)
 
@@ -16,11 +19,17 @@ export function js( done ) {
 }
 
 export function css( done ) {
-    src('src/scss/app.scss', {sourcemaps: true})
+    src('src/scss/app.scss')
+        .pipe( sourcemaps.init() )
         .pipe( sass().on('error', sass.logError) )
-        .pipe( sass({outputStyle: 'compressed'}) )
-        .pipe( dest('build/css', {sourcemaps: '.'}) )
-    server.reload()
+        .pipe( autoprefixer({
+            cascade: false,
+            overrideBrowserslist: ['last 2 versions', 'ie >= 10', 'iOS >= 9']
+        }) )
+        .pipe( csso() )
+        .pipe( sourcemaps.write('.') )
+        .pipe( dest('build/css') )
+        .pipe( server.stream() );
     done()
 }
 
