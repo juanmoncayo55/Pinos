@@ -248,11 +248,11 @@
                             <p>Para más información puedes comunicarte con el área comercial al 3146045771 y al correo coordinacioncomercial@proinge.com.co.</p>
                         </div>
                         <form class="modal-content__formulario" id="formEncuesta">
-
+    
                             <!-- Nombre Completo -->
                             <div class="floating-label-group">
-                                <input type="text" id="nombre_completo" class="form-control" placeholder=" " name="nombre_completo" required>
-                                <label for="nombre_completo">Nombre Completo</label>
+                                <input type="text" id="nombre" class="form-control" placeholder=" " name="nombre" required>
+                                <label for="nombre">Nombre Completo</label>
                             </div>
                             
                             <!-- Número de Cédula -->
@@ -261,232 +261,46 @@
                                 <label for="cedula">Número de Cédula</label>
                             </div>
                             
-                            <!-- Número de Contacto -->
+                            <!-- Número de Celular -->
                             <div class="floating-label-group">
-                                <input type="tel" id="telefono" class="form-control" placeholder=" " name="telefono" required>
-                                <label for="telefono">Número de Contacto</label>
+                                <input type="tel" id="celular" class="form-control" placeholder=" " name="celular" required>
+                                <label for="celular">Número de Celular</label>
                             </div>
-                            
-                            <!-- Dirección -->
+                        
+                            <!-- Correo -->
                             <div class="floating-label-group">
-                                <input type="text" id="direccion" class="form-control" placeholder=" " name="direccion" required>
-                                <label for="direccion">Dirección</label>
+                                <input type="email" id="correo" class="form-control" placeholder=" " name="correo">
+                                <label for="correo">Correo Electrónico (Opcional)</label>
                             </div>
-                            
-                            <!-- ¿Actualmente pagas arriendo o vives con familiares? -->
-                            <p class="question-title">¿Actualmente pagas arriendo o vives con familiares?</p>
+                        
+                            <!-- ¿Recibe Subsidio? -->
+                            <p class="question-title">¿Actualmente recibe algún tipo de subsidio?</p>
                             <div class="radio-group">
                                 <label>
-                                <input type="radio" name="situacion_vivienda" value="Pago arriendo mensualmente">
-                                <span>Pago arriendo mensualmente</span>
+                                    <input type="radio" name="subsidio" value="true" required>
+                                    <span>Sí</span>
                                 </label>
                                 <label>
-                                <input type="radio" name="situacion_vivienda" value="Vivo con familiares">
-                                <span>Vivo con familiares (no tengo casa propia)</span>
+                                    <input type="radio" name="subsidio" value="false" required>
+                                    <span>No</span>
                                 </label>
-                                <label>
-                                <input type="radio" name="situacion_vivienda" value="Otra situación">
-                                <span>Otra situación</span>
-                                </label>
-                            </div>
-                            
-                            <!-- ¿Qué tan importante es para ti tener casa propia en los próximos 6 meses? -->
-                            <p class="question-title">¿Qué tan importante es para ti tener casa propia en los próximos 6 meses?</p>
-                            <div class="radio-group">
-                                <label>
-                                <input type="radio" name="importancia_casa" value="Es mi prioridad">
-                                <span>Es mi prioridad</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="importancia_casa" value="Me interesa, pero no sé cómo empezar">
-                                <span>Me interesa, pero no sé cómo empezar</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="importancia_casa" value="Solo estoy averiguando por ahora">
-                                <span>Solo estoy averiguando por ahora</span>
-                                </label>
-                            </div>
-                            
-                            <!-- ¿Cuántas personas viven contigo actualmente? -->
-                            <p class="question-title">¿Cuántas personas viven contigo actualmente?</p>
-                            <div class="radio-group">
-                                <label>
-                                <input type="radio" name="personas_convivientes" value="Solo yo">
-                                <span>Solo yo</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="personas_convivientes" value="2 personas">
-                                <span>2 personas</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="personas_convivientes" value="3 personas">
-                                <span>3 personas</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="personas_convivientes" value="4 o más">
-                                <span>4 o más</span>
-                                </label>
-                            </div>
-                            
-                            <!-- Actualmente, ¿A qué te dedicas? -->
-                            <p class="question-title">Actualmente, ¿A qué te dedicas?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="ocupacion" value="EMPLEADO"><span>EMPLEADO</span></label>
-                                <label><input type="radio" name="ocupacion" value="PENSIONADO"><span>PENSIONADO</span></label>
-                                <label><input type="radio" name="ocupacion" value="INDEPENDIENTE"><span>INDEPENDIENTE</span></label>
-                                <label><input type="radio" name="ocupacion" value="COLOMBIANO EN EL EXTERIOR"><span>COLOMBIANO EN EL EXTERIOR</span></label>
-                                <label><input type="radio" name="ocupacion" value="MILITAR O POLICIA"><span>MILITAR O POLICIA</span></label>
-                                <label><input type="radio" name="ocupacion" value="Contratista Prestación Servicios Profesionales"><span>Contratista Prestación Servicios Profesionales</span></label>
-                                <label><input type="radio" name="ocupacion" value="Docente"><span>Docente</span></label>
-                                <label><input type="radio" name="ocupacion" value="Otra"><span>Otra…</span></label>
-                            </div>
-                            
-                            <!-- En caso de ser empleado, ¿Qué tipo de contrato laboral tienes? -->
-                            <p class="question-title">En caso de ser empleado, ¿Qué tipo de contrato laboral tienes?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="tipo_contrato" value="Termino Fijo"><span>Término Fijo</span></label>
-                                <label><input type="radio" name="tipo_contrato" value="Término Indefinido"><span>Término Indefinido</span></label>
-                                <label><input type="radio" name="tipo_contrato" value="Prestación de servicios"><span>Prestación de servicios</span></label>
-                            </div>
-                            
-                            <!-- ¿El proceso de compra lo realizas solo(a) o con otra persona? -->
-                            <p class="question-title">¿El proceso de compra del apartamento lo realizas solo(a) o con otra persona?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="proceso_compra" value="Solo(a)"><span>Solo(a)</span></label>
-                                <label><input type="radio" name="proceso_compra" value="Con otra persona o personas"><span>Con otra persona o personas</span></label>
-                            </div>
-
-                            <!-- ¿Cuál es el monto de tus ingresos mensuales por la actividad que desempeñas? -->
-                            <p class="question-title">¿Cuál es el monto de tus ingresos mensuales por la actividad que desempeñas?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="ingresos_personales" value="1.423.500 a 2.000.000"><span>De $1.423.500 a $2.000.000</span></label>
-                                <label><input type="radio" name="ingresos_personales" value="2.000.000 a 2.847.000"><span>De $2.000.000 a  $2.847.000</span></label>
-                                <label><input type="radio" name="ingresos_personales" value="2.847.000 a 3.500.000"><span>De $2.847.000 a $3.500.000</span></label>
-                                <label><input type="radio" name="ingresos_personales" value="3.500.000 en adelante"><span>De $3.500.000 en adelante</span></label>
-                                <div class="floating-label-group">
-                                    <input type="text" id="otra_ingreso_personal" class="form-control" placeholder=" ">
-                                    <label for="otra_ingreso_personal">Otra…</label>
-                                </div>
-                            </div>
-
-                            <!-- Ingreso mensual total del grupo familiar -->
-                            <p class="question-title">En caso de que el proceso de compra sea con otras personas, ¿Cuál es el ingreso mensual total del grupo familiar?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="ingresos_familiares" value="1.423.500 a 2.000.000"><span>De $1.423.500 a $2.000.000</span></label>
-                                <label><input type="radio" name="ingresos_familiares" value="2.000.000 a 2.847.000"><span>De $2.000.000 a $2.847.000</span></label>
-                                <label><input type="radio" name="ingresos_familiares" value="2.847.000 a 3.500.000"><span>De $2.847.000 a $3.500.000</span></label>
-                                <label><input type="radio" name="ingresos_familiares" value="3.500.000 en adelante"><span>De $3.500.000 en adelante</span></label>
-                                <div class="floating-label-group">
-                                    <input type="text" id="otra_ingreso_familia" class="form-control" placeholder=" ">
-                                    <label for="otra_ingreso_familia">Otra…</label>
-                                </div>
-                            </div>
-
-                            <!-- ¿Dispones de recursos propios? -->
-                            <p class="question-title">¿Dispones de recursos propios para pagar parte de la cuota inicial?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="recursos_propios" value="1.000.000 a 10.000.000"><span>Entre $1.000.000 a $10.000.000 millones</span></label>
-                                <label><input type="radio" name="recursos_propios" value="10.000.001 a 20.000.000"><span>Entre $10.000.001 a $20.000.000 millones</span></label>
-                                <label><input type="radio" name="recursos_propios" value="20.000.001 a 30.000.000"><span>Entre $20.000.001 a $30.000.000 millones</span></label>
-                                <label><input type="radio" name="recursos_propios" value="Más de 30.000.001"><span>Más de $30.000.001 millones</span></label>
-                                <label><input type="radio" name="recursos_propios" value="No cuento con recursos"><span>NO cuento con recursos propios para la cuota inicial de mi vivienda</span></label>
-                            </div>
-
-                            <!-- ¿Tienes créditos o deudas activas? -->
-                            <p class="question-title">¿Tienes créditos o deudas activas?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="deudas" value="1.000.000 a 5.000.000"><span>Entre $1.000.000 y $5.000.000 millones</span></label>
-                                <label><input type="radio" name="deudas" value="5.000.001 a 10.000.000"><span>Entre $5.000.001 hasta $10.000.000 millones</span></label>
-                                <label><input type="radio" name="deudas" value="Más de 10.000.000"><span>Más de $10.000.000 millones</span></label>
-                                <label><input type="radio" name="deudas" value="No tengo deudas"><span>NO tengo crédito ni deudas</span></label>
-                            </div>
-
-                            <!-- ¿Estás registrado en el SISBÉN IV? -->
-                            <p class="question-title">¿Estás registrado(a) en el SISBÉN IV?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="sisben" value="Sí"><span>Sí</span></label>
-                                <label><input type="radio" name="sisben" value="No"><span>No</span></label>
-                                <label><input type="radio" name="sisben" value="No sé"><span>No sé</span></label>
-                            </div>
-
-                            <!-- Clasificación SISBÉN IV -->
-                            <p class="question-title">¿Cuál es tu clasificación SISBÉN IV?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="clasificacion_sisben" value="A1 a A5"><span>De A1 a A5</span></label>
-                                <label><input type="radio" name="clasificacion_sisben" value="B1 a B7"><span>De B1 a B7</span></label>
-                                <label><input type="radio" name="clasificacion_sisben" value="C1 a C18"><span>De C1 a C18</span></label>
-                                <label><input type="radio" name="clasificacion_sisben" value="D1 a D20"><span>De D1 a D20</span></label>
-                                <label><input type="radio" name="clasificacion_sisben" value="D21"><span>D21</span></label>
-                                <label><input type="radio" name="clasificacion_sisben" value="No sé / No aplica"><span>No sé / No aplica</span></label>
-                            </div>
-
-                            <!-- ¿Estás afiliado a una Caja de Compensación Familiar? -->
-                            <p class="question-title">¿Estás afiliado(a) a una Caja de Compensación Familiar?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="caja_compensacion" value="Si"><span>Si</span></label>
-                                <label><input type="radio" name="caja_compensacion" value="No"><span>No</span></label>
-                                <label><input type="radio" name="caja_compensacion" value="No sé"><span>No sé</span></label>
-                            </div>
-
-                            <!-- Nombre Caja de Compensación -->
-                            <div class="floating-label-group">
-                                <input type="text" id="nombre_caja" class="form-control" placeholder=" ">
-                                <label for="nombre_caja">¿Cuál es el nombre de tu Caja de Compensación Familiar?</label>
-                            </div>
-
-                            <!-- Categoría Caja de Compensación -->
-                            <p class="question-title">¿Cuál es tu categoría dentro de la Caja de Compensación Familiar?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="categoria_caja" value="CATEGORIA A"><span>CATEGORIA A, de 1 a 2 SMMLV</span></label>
-                                <label><input type="radio" name="categoria_caja" value="CATEGORIA B"><span>CATEGORIA B, de 2 a 4 SMMLV</span></label>
-                                <label><input type="radio" name="categoria_caja" value="CATEGORIA C"><span>CATEGORIA C, de 4 SMMLV en adelante</span></label>
-                            </div>
-
-                            <!-- Proyecto Los Pinos -->
-                            <p class="question-title">¿Estás interesado(a) en adquirir un apartamento VIS en el Proyecto Los Pinos, Manizales?</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="proyecto_los_pinos" value="Dos habitaciones"><span>Sí, de dos (2) habitaciones por 120 SMMLV ($170.820.000)</span></label>
-                                <label><input type="radio" name="proyecto_los_pinos" value="Tres habitaciones"><span>Sí, de tres (3) habitaciones por 135 SMMLV ($192.172.500)</span></label>
-                                <label><input type="radio" name="proyecto_los_pinos" value="Quiero asesoría"><span>Quiero recibir asesoría para elegir</span></label>
-                                <label><input type="radio" name="proyecto_los_pinos" value="Solo explorando"><span>Solo estoy explorando</span></label>
-                            </div>
-
-                            <!-- Asesoría paso a paso -->
-                            <p class="question-title">¿Te gustaría que un asesor te ayude de manera gratuita con el paso a paso para lograr la compra de tu vivienda? 💬</p>
-                            <div class="radio-group">
-                                <label><input type="radio" name="asesoria" value="Visita presencial"><span>Sí, quiero agendar una visita de manera presencial</span></label>
-                                <label><input type="radio" name="asesoria" value="Videollamada"><span>Sí, prefiero una videollamada de orientación</span></label>
-                                <label><input type="radio" name="asesoria" value="Solo quiero información"><span>Solo quiero información por ahora</span></label>
-                            </div>
-                            
-                            <!-- ¿Qué día sería ideal para tu cita? -->
-                            <div class="floating-label-group mtDay">
-                                <input type="date" id="dia_cita" class="form-control" placeholder=" " name="dia_cita" required>
-                                <label for="dia_cita" class="title-hour">¿Qué día sería ideal para tu cita?</label>
-                            </div>
-                            
-                            <!-- ¿Qué hora sería ideal para tu cita? -->
-                            <div class="floating-label-group mtHour">
-                                <input type="time" id="hora_cita" class="form-control" placeholder=" " name="hora_cita" required>
-                                <label for="hora_cita" class="title-hour">¿Qué hora sería ideal para tu cita?</label>
                             </div>
                             
                             <div class="modal-content__footer">
                                 <p class="modal-content__footer-title">Tratamiento de datos</p>
-    
+                        
                                 <p>En <span class="fbold">PROINGE</span>, tratamos tus datos personales con responsabilidad y compromiso, en cumplimiento de la Ley 1581 de 2012 y sus normas reglamentarias.</p>
-    
+                        
                                 <p>Los datos que nos suministres serán utilizados exclusivamente para brindarte asesoría personalizada y gestionar opciones para el cierre financiero del Proyecto Los Pinos – Ciudadela Puerta del Sol.</p>
-    
+                        
                                 <p>Tus datos  serán compartidos con terceros para poder gestionar el cierre financiero del Proyecto Los Pinos – Ciudadela Puerta del Sol.  . Puedes ejercer en cualquier momento tus derechos de acceso, corrección, actualización y supresión de tus datos, comunicándote con nosotros a través del correo electrónico: coordinacioncomercial@proinge.com.co</p>
-    
+                        
                                 <p>Al diligenciar este formulario, autorizas a PROINGE a realizar el tratamiento de tus datos personales conforme a esta política.</p>
-    
-    
+                        
+                        
                                 <input type="submit" class="modal-content__footer-btn" id="btnSendDataForm" value="Enviar">
                             </div>
                         </form>
-                        
                     </div>
                 </div>
                 
